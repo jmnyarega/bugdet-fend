@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 // actions
 import { login } from "../../../actions/users/login";
 
+// components
+import LoginForm from "./LoginForm";
+
 // css
 import "./index.css";
 
@@ -34,37 +37,12 @@ class Login extends React.Component {
     const { email, password } = this.state;
     return (
       <div className="login-page">
-        <fieldset>
-          <legend> Login </legend>
-          <form onSubmit={this.login}>
-            <div className="email">
-              <label> Email:
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={this.onChange}
-                />
-              </label>
-            </div>
-            <div className="password">
-              <label> Password:
-                <input
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={this.onChange}
-                />
-              </label>
-            </div>
-            <div className="button">
-              <input
-                type="submit"
-                value="submit"
-              />
-            </div>
-          </form>
-        </fieldset>
+        <LoginForm
+          email={email}
+          password={password}
+          onChange={this.onChange}
+          login={this.login}
+        />
       </div>
     )
   }

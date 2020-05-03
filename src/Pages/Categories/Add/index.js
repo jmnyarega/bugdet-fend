@@ -5,6 +5,9 @@ import { connect } from "react-redux"
 // actions
 import { addCategory } from "../../../actions/categories/add";
 
+// components
+import AddCategoryForm from "./AddCategoryForm";
+
 // css
 import "./index.css";
 
@@ -33,37 +36,12 @@ class Category extends React.Component {
     const { description, name } = this.state;
     return (
       <div className="category-page">
-        <fieldset>
-          <legend> Add Category </legend>
-          <form onSubmit={this.addCategory}>
-            <div className="name">
-              <label> Name:
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={this.onChange}
-                />
-              </label>
-            </div>
-            <div className="description">
-              <label> Desccription:
-                <input
-                  type="text"
-                  name="description"
-                  value={description}
-                  onChange={this.onChange}
-                />
-              </label>
-            </div>
-            <div className="button">
-              <input
-                type="submit"
-                value="submit"
-              />
-            </div>
-          </form>
-        </fieldset>
+        <AddCategoryForm
+          description={description}
+          name={name}
+          onChange={this.onChange}
+          addCategory={this.addCategory}
+        />
       </div>
     )
   }

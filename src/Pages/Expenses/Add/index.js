@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { addUserExpenses } from "../../../actions/expenses/add";
 
 // components
-import AddExpenseForm from "./components/AddExpenseForm";
+import AddExpenseForm from "./AddExpenseForm";
 
 // css
 import "./index.css";

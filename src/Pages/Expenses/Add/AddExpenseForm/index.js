@@ -1,7 +1,7 @@
 // react
 import React from "react";
 
-const AddExpenseForms = props => {
+const AddExpenseForm = props => {
   const { date, name, description, amount } = props.formData;
   return (
     <div className="expenses-page">
@@ -81,4 +81,4 @@ const AddExpenseForms = props => {
   )
 }
 
-export default AddExpenseForms;
+export default AddExpenseForm;
