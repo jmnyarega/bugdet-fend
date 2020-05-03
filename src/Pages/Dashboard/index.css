@@ -1,0 +1,71 @@
+.dashboard > .navbar {
+  height: 50px;
+}
+
+.dashboard .main > form {
+  display: flex;
+  justify-content: space-around;
+}
+.category-page {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-around;
+}
+
+.dashboard .main form input {
+  margin-bottom: 15px;
+  height: 15px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.dashboard .main input[type=submit] {
+  height: 25px;
+}
+
+.dashboard .main label {
+  display: flex;
+  align-items: baseline;
+}
+
+.dashboard .main select {
+  margin-bottom: 15px;
+  height: 15px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 3px;
+  height: 25px;
+}
+
+.dashboard .display .table {
+  width: 100%;
+  padding: 2%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.dashboard .display .table tr {
+  height: 33px;
+}
+
+
+.dashboard .display .table tr:nth-child(1) {
+  background: #808080;
+  color: #fff;
+}
+
+.dashboard .display .table tr:nth-child(even) {
+  background: #dcdcdc;
+}
+
+.dashboard .links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.dashboard .links a {
+  text-decoration: none;
+}

@@ -1,0 +1,33 @@
+.category-page {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+}
+
+.category-page fieldset {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.category-page input {
+  margin-bottom: 15px;
+  height: 25px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.category-page input[type=email], input[type=password], input[type=text] {
+  width: 150%;
+  display: block;
+  overflow: hidden;
+}
+
+.category-page input[type=submit] {
+  float: right;
+}
+
+.category-page label {
+  display: inline-grid;
+}

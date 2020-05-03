@@ -1,0 +1,33 @@
+.login-page {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+}
+
+.login-page fieldset {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.login-page input {
+  margin-bottom: 15px;
+  height: 25px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.login-page input[type=email], input[type=password] {
+  width: 150%;
+  display: block;
+  overflow: hidden;
+}
+
+.login-page input[type=submit] {
+  float: right;
+}
+
+.login-page label {
+  display: inline-grid;
+}

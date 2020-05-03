@@ -1,0 +1,49 @@
+.expenses-page {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+}
+
+.expenses-page fieldset {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.expenses-page input {
+  margin-bottom: 15px;
+  height: 25px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.expenses-page
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=text],
+  input[type=date] {
+  width: 150%;
+  display: block;
+  overflow: hidden;
+}
+
+.expenses-page select {
+  margin-bottom: 15px;
+  height: 15px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 3px;
+  height: 25px;
+}
+
+
+
+.expenses-page input[type=submit] {
+  float: right;
+}
+
+.expenses-page label {
+  display: inline-grid;
+}

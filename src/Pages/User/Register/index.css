@@ -1,0 +1,33 @@
+.register-page {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+}
+
+.register-page fieldset {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+}
+
+.register-page input {
+  margin-bottom: 15px;
+  height: 25px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.register-page input[type=email], input[type=password], input[type=text] {
+  width: 150%;
+  display: block;
+  overflow: hidden;
+}
+
+.register-page input[type=submit] {
+  float: right;
+}
+
+.register-page label {
+  display: inline-grid;
+}
