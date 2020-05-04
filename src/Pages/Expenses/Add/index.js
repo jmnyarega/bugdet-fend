@@ -27,12 +27,10 @@ class Expenses extends React.Component {
   onChange = e => {
     this.setState({
       [e.target.name]: e.target.value
-    }, () => {
-      console.log(this.state);
     });
   }
 
-  addCategory = e => {
+  addExpense = e => {
     e.preventDefault();
     this.props.addExpense(this.state);
   }
@@ -40,8 +38,10 @@ class Expenses extends React.Component {
   render() {
     return (
       <AddExpenseForm
+        addExpense={this.addExpense}
         onChange={this.onChange}
         formData={this.state}
+        categories={this.props.categories}
       />
     )
   }
@@ -52,7 +52,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return { addUserExpenses: data => dispatch(addUserExpenses(data)) }
+  return { addExpense: data => dispatch(addUserExpenses(data)) }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Expenses);

@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import Login from "./Pages/User/Login";
 import Register from "./Pages/User/Register";
 import Index from "./Pages/Dashboard/index";
-import Expenses from "./Pages/Expenses/Add";
 import Categories from "./Pages/Categories/Add";
 import NavBar from "./Pages/Dashboard/NavBar";
 import Logout from "./Pages/User/logout";
@@ -37,7 +36,6 @@ class Routers extends React.Component {
         <React.Fragment>
           <NavBar />
           <Route component={Index} exact path="/" />
-          <Route component={Expenses} path="/expenses" />
           <Route component={Categories} path="/categories" />
           <Route component={Logout} path="/logout" />
         </React.Fragment>

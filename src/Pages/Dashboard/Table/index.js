@@ -15,6 +15,8 @@ const ExpenseTable = props => {
             <th>Date</th>
           </tr>
           { expenses && expenses.map(expense => {
+            const date = new Date(expense.date);
+            const expenseDate = `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`;
             return (
               <tr key={expense.id}>
                 <td>{expense.id}</td>
@@ -22,7 +24,7 @@ const ExpenseTable = props => {
                 <td>{}</td>
                 <td>{expense.amount}</td>
                 <td>{expense.description}</td>
-                <td>{expense.date}</td>
+                <td>{expenseDate}</td>
               </tr>
             )})}
         </tbody>

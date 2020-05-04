@@ -20,6 +20,10 @@
   padding: 5px;
 }
 
+.dashboard .content {
+  display: flex;
+}
+
 .dashboard .main input[type=submit] {
   height: 25px;
 }

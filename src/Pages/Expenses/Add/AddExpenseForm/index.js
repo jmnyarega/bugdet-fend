@@ -7,7 +7,7 @@ const AddExpenseForm = props => {
     <div className="expenses-page">
       <fieldset>
         <legend> Add Expense </legend>
-        <form onSubmit={props.addCategory}>
+        <form onSubmit={props.addExpense}>
           <div className="name">
             <label> Name:
               <input
@@ -34,18 +34,12 @@ const AddExpenseForm = props => {
             <label> Category:
               <select name="CategoryId" onChange={props.onChange}>
                 <option value="">Select Category</option>
-                <option value="1">Food</option>
-                <option value="2">Hospital Bills</option>
-                <option value="3">Electricity Bills</option>
-                <option value="4">Transport</option>
-                <option value="5">water Bills</option>
-                <option value="6">Trash Bills</option>
-                <option value="7">Bank withdrawal charges</option>
-                <option value="8">Electronics(work tools)</option>
-                <option value="9">Phone Bills</option>
-                <option value="10">Toiletries</option>
-                <option value="11">House Rent</option>
-                <option value="11">House Equipments</option>
+                {
+                  props.categories.map(category => {
+                    return (
+                      <option value={category.id}>{category.name}</option>
+                  )})
+                }
               </select>
             </label>
           </div>

@@ -1,15 +1,18 @@
 import React from "react";
 
-const Filters = () => {
+const Filters = props => {
   return (
     <div className="main">
       <form>
         <label> Category:
           <select>
-            <option value=""> Selection Category </option>
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
+            <option value="">Select Category</option>
+            {
+              props.categories.map(category => {
+                return (
+                  <option value={category.id}>{category.name}</option>
+                )})
+            }
           </select>
         </label>
         <label> Search(name):

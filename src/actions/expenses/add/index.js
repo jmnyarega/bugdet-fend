@@ -10,7 +10,7 @@ const addUserExpensesActionCreator = payload => {
 
 export function addUserExpenses(data) {
   return dispatch => {
-    http().post(`http://localhost:3005/expenses`, data).then(res => {
+    http().post(`http://localhost:3005/expense`, data).then(res => {
       return dispatch(addUserExpensesActionCreator(res.data));
     }).catch(error => {
       return dispatch(addUserExpensesActionCreator({message: error.message}));
